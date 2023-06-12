@@ -22,6 +22,7 @@ app.get("/", (req, res) => {
   res.send("Server is ready");
 });
 
+// custom error handling
 app.use(notFound);
 app.use(errorHandler);
 

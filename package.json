@@ -6,7 +6,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node api/app.js",
-    "server": "nodemon api/app.js --signal SIGTERM"
+    "server": "nodemon api/app.js --signal SIGTERM",
+    "client": "npm run dev --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "keywords": [],
   "author": "",
@@ -19,5 +21,8 @@
     "express-async-handler": "^1.2.0",
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^7.2.3"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
   }
 }
